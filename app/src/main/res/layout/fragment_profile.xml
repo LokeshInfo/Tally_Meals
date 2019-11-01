@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroud_purple">
+
+
+    <RelativeLayout
+        android:id="@+id/ttbr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_Purple"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_collapseMode="pin"
+            android:background="@color/app_theme"/>
+
+        <TextView
+            android:id="@+id/txToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Account Details"
+            android:textSize="17dp"
+            android:singleLine="true"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/imgToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_black_24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/ttbr"
+        android:layout_marginTop="10pt"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Edit Account"
+        android:textSize="10pt"
+        android:textColor="@color/white"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardacc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@color/white"
+        app:cardCornerRadius="14dp"
+        android:elevation="10dp"
+        android:layout_gravity="center_vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="First Name"
+             android:textAlignment="center"
+             android:textSize="9pt"
+             android:textColor="@color/black"
+             android:focusableInTouchMode="true"
+             android:inputType="text"
+             android:background="@android:color/transparent"
+             android:layout_margin="7dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.55dp"
+                android:background="@color/black"
+                android:layout_margin="7dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:textAlignment="center"
+                android:textSize="9pt"
+                android:textColor="@color/black"
+                android:layout_margin="7dp"
+                android:inputType="text"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.55dp"
+                android:background="@color/black"
+                android:layout_margin="7dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail address"
+                android:textAlignment="center"
+                android:textSize="9pt"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:layout_margin="7dp"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/transparent"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.55dp"
+                android:background="@color/black"
+                android:layout_margin="7dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone no."
+                android:textAlignment="center"
+                android:textSize="9pt"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:layout_margin="7dp"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/transparent"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Save"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="5dp"
+        android:textAllCaps="false"
+        android:background="@drawable/button"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
