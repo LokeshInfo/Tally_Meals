@@ -146,7 +146,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Salad Bar"
+                        android:text="@string/lunch0"
                         android:textSize="8pt"
                         style="@style/bold_tx"
                         android:textColor="@color/black"
@@ -158,6 +158,18 @@
                         android:layout_height="wrap_content"
                         android:text="Black Bean Burhers"
                         android:textSize="8pt"
+                        style="@style/tx_vu"
+                        android:layout_marginTop="3pt"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner1"
+                        android:textSize="8pt"
+                        android:layout_marginTop="3pt"
                         style="@style/bold_tx"
                         android:textColor="@color/black"
                         android:textAlignment="center"
@@ -168,7 +180,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lunch1"
                         android:textSize="8pt"
-                        style="@style/bold_tx"
+                        android:layout_marginTop="3pt"
+                        style="@style/tx_vu"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         />
@@ -271,9 +284,22 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Salad Bar"
+                    android:text="@string/dinner1"
                     android:textSize="8pt"
                     style="@style/bold_tx"
+                    android:layout_marginTop="3pt"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Salad Bar"
+                    android:textSize="8pt"
+                    style="@style/tx_vu"
+                    android:layout_marginTop="3pt"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     />
@@ -284,6 +310,7 @@
                     android:text="Black Bean Burhers"
                     android:textSize="8pt"
                     style="@style/bold_tx"
+                    android:layout_marginTop="3pt"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     />
@@ -295,6 +322,8 @@
                     android:text="Swiss Cheese, shaved lettuce
                              English Muffin"
                     android:textSize="8pt"
+                    style="@style/bold_tx"
+                    android:layout_marginTop="3pt"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     />
@@ -304,7 +333,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/dinner3"
                     android:textSize="8pt"
-                    style="@style/bold_tx"
+                    style="@style/tx_vu"
+                    android:layout_marginTop="3pt"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     />

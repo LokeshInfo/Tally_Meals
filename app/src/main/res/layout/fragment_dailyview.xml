@@ -68,19 +68,38 @@
         android:paddingBottom="15pt"
         >
 
-        <LinearLayout
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="10dp"
-            android:background="@drawable/blue_ed"
-            android:layout_margin="30dp"
+            android:layout_margin="15dp"
             >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardCornerRadius="20dp"
+                android:alpha="0.5"
+                >
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                >
             <ImageView
                 android:id="@+id/ic_previous"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
+                style="@style/bold_tx"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_left"/>
 
         <TextView
@@ -89,8 +108,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:textAlignment="center"
+            style="@style/bold_tx"
             android:text="24 Oct , 2019"
             android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
             android:textSize="9pt"/>
 
             <ImageView
@@ -98,9 +119,12 @@
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
+                style="@style/bold_tx"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_right"/>
 
-        </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -153,7 +177,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Burgers and Sandwhiches"
+            style="@style/bold_tx"
+            android:text="@string/lunch0"
             android:textColor="@color/white"
             android:layout_marginTop="10dp"
             android:textSize="8pt"/>
@@ -171,6 +196,65 @@
             android:layout_marginLeft="30dp"
             android:singleLine="false"
             android:textSize="8pt"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="30dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Party Size"
+                android:textColor="@color/white"
+                android:textSize="9pt"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lunchcrd"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                app:cardCornerRadius="10dp"
+                android:alpha="0.5"
+                android:layout_marginLeft="10dp"
+                >
+
+
+            </androidx.cardview.widget.CardView>
+
+                <Spinner
+                    android:id="@+id/spinner_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignEnd="@+id/lunchcrd"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Late Plate"
+                android:textColor="@color/white"
+                android:textSize="9pt"
+                android:layout_marginLeft="11dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+
+        </LinearLayout>
 
 
         <androidx.cardview.widget.CardView
@@ -290,6 +374,7 @@
             android:layout_marginRight="30dp"
             android:lineSpacingExtra="4dp"
             android:padding="3dp"
+            style="@style/bold_tx"
             android:layout_marginLeft="30dp"
             android:singleLine="false"
             android:textSize="8pt"/>
@@ -304,6 +389,68 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:textSize="8pt"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="30dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Party Size"
+                android:textColor="@color/white"
+                android:textSize="9pt"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/dinnrcrd"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    app:cardCornerRadius="10dp"
+                    android:alpha="0.5"
+                    android:layout_marginLeft="10dp"
+                    >
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Spinner
+                    android:id="@+id/spinner_dinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignEnd="@+id/dinnrcrd"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Late Plate"
+                android:textColor="@color/white"
+                android:textSize="9pt"
+                android:layout_marginLeft="11dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+
+        </LinearLayout>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

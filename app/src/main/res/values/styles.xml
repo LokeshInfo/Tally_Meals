@@ -30,6 +30,9 @@
         <item name="fontPath">fonts/Roboto-Bold.ttf</item>
     </style>
 
+    <style name="CustomSpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/ic_arrow_drop_down_black_24dp</item>
+    </style>
 
     <style name="ed_txt" parent="android:Widget.EditText">
         <item name="fontPath">fonts/Roboto-Regular.ttf</item>

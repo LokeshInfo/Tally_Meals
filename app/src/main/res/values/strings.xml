@@ -17,7 +17,8 @@
 
     <string name="enter_code">Please enter the Security Code below</string>
     <string name="enter_codepass">Please enter the Security Password below</string>
-    <string name="lunch1">Onion Rings and Crispy Potato Coins Homemade bread baked with berries and topped with our home-made carmel sauce</string>
+    <string name="lunch0">Onion Rings and Crispy Potato Coins</string>
+    <string name="lunch1">Homemade bread baked with berries and topped with our home-made carmel sauce</string>
     <string name="dinner1">Shrimp Brochette Dinner</string>
     <string name="dinner2">Butterflied shrimp are stuffed with jalapeno and wrapped in bacon, and it just gets better from there. This goes great with dirty rice a nice green salad and crusty French bread</string>
     <string name="dinner3">Butterflied and stuffed with cream cheese</string>

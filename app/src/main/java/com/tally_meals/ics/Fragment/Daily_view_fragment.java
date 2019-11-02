@@ -6,9 +6,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,7 +22,9 @@ import com.tally_meals.ics.MainActivity;
 import com.tally_meals.ics.R;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Daily_view_fragment extends Fragment
 {
@@ -31,6 +35,7 @@ public class Daily_view_fragment extends Fragment
     SimpleDateFormat df;
     Calendar c;
     RelativeLayout rootlyt;
+    Spinner spinner_lunch, spinner_dinner;
 
 
     @Nullable
@@ -45,6 +50,9 @@ public class Daily_view_fragment extends Fragment
         previous = view.findViewById(R.id.ic_previous);
         date = view.findViewById(R.id.txdate);
         rootlyt = view.findViewById(R.id.root_dailyview);
+        spinner_dinner = view.findViewById(R.id.spinner_dinner);
+        spinner_lunch = view.findViewById(R.id.spinner_lunch);
+
 
         imgToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +62,18 @@ public class Daily_view_fragment extends Fragment
         });
 
 
+
+        List<String> list = new ArrayList<String>();
+        list.add(" 1 ");
+        list.add(" 2 ");
+        list.add(" 3 ");
+        list.add(" 4 ");
+        list.add(" 5 ");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinner_item, list);
+        dataAdapter.setDropDownViewResource(R.layout.spinner_item);
+        spinner_lunch.setAdapter(dataAdapter);
+        spinner_dinner.setAdapter(dataAdapter);
 
          c = Calendar.getInstance();
 
