@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Security Code"
+        android:text="Sorority Code"
         style="@style/bold_tx"
         android:textSize="12pt"
         android:textColor="@color/white"

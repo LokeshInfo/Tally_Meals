@@ -15,8 +15,8 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
-    <string name="enter_code">Please enter the Security Code below</string>
-    <string name="enter_codepass">Please enter the Security Password below</string>
+    <string name="enter_code">Please enter the Sorority Code below</string>
+    <string name="enter_codepass">Please enter the Sorority password below</string>
     <string name="lunch0">Onion Rings and Crispy Potato Coins</string>
     <string name="lunch1">Homemade bread baked with berries and topped with our home-made carmel sauce</string>
     <string name="dinner1">Shrimp Brochette Dinner</string>

@@ -21,10 +21,7 @@ import com.tally_meals.ics.R;
 
 import org.joda.time.DateTime;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 public class Home_fragment extends Fragment implements DatePickerListener
 {
@@ -33,7 +30,6 @@ public class Home_fragment extends Fragment implements DatePickerListener
     int currentdate;
     LinearLayout ll1 ,ll2;
     HorizontalPicker jonyCalendar;
-
 
     @Nullable
     @Override
@@ -83,10 +79,12 @@ public class Home_fragment extends Fragment implements DatePickerListener
                 .setDayOfWeekTextColor(getResources().getColor(R.color.light_Purple))
                 .setMonthAndYearTextColor(getResources().getColor(R.color.light_Purple))
                 .setDateSelectedColor(getResources().getColor(R.color.light_Purple))
+                .showTodayButton(false)
                 .init();
 
 
         jonyCalendar.setBackgroundColor(getResources().getColor(R.color.light_Purple2));
+        jonyCalendar.setDate(new DateTime());
 
         Click_Listeners();
 

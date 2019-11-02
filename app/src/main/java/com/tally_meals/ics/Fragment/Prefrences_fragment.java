@@ -17,7 +17,7 @@ import com.tally_meals.ics.R;
 public class Prefrences_fragment extends Fragment
 {
     ImageView imgToolbar;
-    CardView card_Vegan, card_Vegetarian, cmilk, csoy, cegg, cwheat, cpeanut, cfish, csalt, cdal;
+    CardView card_Vegan, card_Vegetarian, cmilk, csoy, cegg, cwheat, cpeanut, cfish, csalt;
     ImageView check_vegan, check_vegetarian, ch_milk, ch_soy, ch_egg, ch_wheat, ch_peanut, ch_fish, ch_salt, ch_dal;
     int ch1=0 , ch2=0;
     int ch3=0, ch4=0, ch5=0, ch6=0, ch7=0, ch8=0, ch9=0, ch10=0;
@@ -42,7 +42,6 @@ public class Prefrences_fragment extends Fragment
         cpeanut = view.findViewById(R.id.c_peanut);
         cfish = view.findViewById(R.id.c_shelfish);
         csalt = view.findViewById(R.id.c_salt);
-        cdal = view.findViewById(R.id.c_dal);
 
         ch_milk = view.findViewById(R.id.ch_milk);
         ch_soy = view.findViewById(R.id.ch_soy);
@@ -51,7 +50,6 @@ public class Prefrences_fragment extends Fragment
         ch_peanut = view.findViewById(R.id.ch_peanut);
         ch_fish = view.findViewById(R.id.ch_fish);
         ch_salt = view.findViewById(R.id.ch_salt);
-        ch_dal = view.findViewById(R.id.ch_dal);
 
         Click_Listeners();
 
@@ -201,21 +199,5 @@ public class Prefrences_fragment extends Fragment
                 }
             }
         });
-
-        cdal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (ch10==0)
-                {
-                    ch_dal.setVisibility(View.VISIBLE);    ch10=1;
-                }
-                else
-                {
-                    ch_dal.setVisibility(View.INVISIBLE);  ch10=0;
-                }
-            }
-        });
-
-
     }
 }
