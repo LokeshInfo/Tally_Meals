@@ -25,7 +25,8 @@ import java.util.Calendar;
 
 public class Home_fragment extends Fragment implements DatePickerListener
 {
-    ImageView imgToolbar, ic_Notify, icarrow1, icarrow2;
+    ImageView imgToolbar, ic_Notify;
+    //icarrow1, icarrow2;
     Toolbar toolbar;
     int currentdate;
     LinearLayout ll1 ,ll2;
@@ -40,8 +41,8 @@ public class Home_fragment extends Fragment implements DatePickerListener
         imgToolbar = view.findViewById(R.id.imgToolbar);
         toolbar = view.findViewById(R.id.toolbar);
         ic_Notify = view.findViewById(R.id.ic_notify);
-        icarrow1 = view.findViewById(R.id.ic_dow1);
-        icarrow2 = view.findViewById(R.id.ic_dow2);
+        //icarrow1 = view.findViewById(R.id.ic_dow1);
+        //icarrow2 = view.findViewById(R.id.ic_dow2);
         ll1 = view.findViewById(R.id.ll1);
         ll2 = view.findViewById(R.id.ll2);
 
@@ -100,7 +101,7 @@ public class Home_fragment extends Fragment implements DatePickerListener
 
     private void Click_Listeners()
     {
-        icarrow1.setOnClickListener(new View.OnClickListener() {
+      /*  icarrow1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (ll1.getVisibility() == View.GONE) {
@@ -123,7 +124,7 @@ public class Home_fragment extends Fragment implements DatePickerListener
                 {
                     ll2.setVisibility(View.GONE);
                 }            }
-        });
+        });*/
 
     }
 

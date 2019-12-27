@@ -51,15 +51,12 @@ public class Daily_view_fragment extends Fragment
         spinner_dinner = view.findViewById(R.id.spinner_dinner);
         spinner_lunch = view.findViewById(R.id.spinner_lunch);
 
-
         imgToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ((MainActivity)getActivity()).openDrawer();
             }
         });
-
-
 
         List<String> list = new ArrayList<String>();
         list.add(" 1 ");
@@ -106,7 +103,4 @@ public class Daily_view_fragment extends Fragment
 
         return view;
     }
-
-
-
 }
