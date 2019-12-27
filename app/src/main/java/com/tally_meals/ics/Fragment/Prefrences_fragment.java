@@ -17,9 +17,9 @@ import com.tally_meals.ics.R;
 public class Prefrences_fragment extends Fragment
 {
     ImageView imgToolbar;
-    CardView card_Vegan, card_Vegetarian, cmilk, csoy, cegg, cwheat, cpeanut, cfish, csalt;
-    ImageView check_vegan, check_vegetarian, ch_milk, ch_soy, ch_egg, ch_wheat, ch_peanut, ch_fish, ch_salt, ch_dal;
-    int ch1=0 , ch2=0;
+    CardView card_none,card_Vegan, card_Vegetarian, cmilk, csoy, cegg, cwheat, cpeanut, cfish, csalt;
+    ImageView check_none,check_vegan, check_vegetarian, ch_milk, ch_soy, ch_egg, ch_wheat, ch_peanut, ch_fish, ch_salt, ch_dal;
+    int ch=0, ch1=0 , ch2=0;
     int ch3=0, ch4=0, ch5=0, ch6=0, ch7=0, ch8=0, ch9=0, ch10=0;
 
     @Nullable
@@ -34,6 +34,8 @@ public class Prefrences_fragment extends Fragment
         card_Vegetarian = view.findViewById(R.id.card_vegetarian);
         check_vegan = view.findViewById(R.id.check_vegan);
         check_vegetarian = view.findViewById(R.id.check_vegetarian);
+        card_none = view.findViewById(R.id.card_none);
+        check_none = view.findViewById(R.id.check_none);
 
         cmilk = view.findViewById(R.id.c_milk);
         csoy = view.findViewById(R.id.c_soy);
@@ -65,13 +67,32 @@ public class Prefrences_fragment extends Fragment
 
     private void Click_Listeners()
     {
+        card_none.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ch==0)
+                {
+                    check_none.setVisibility(View.VISIBLE);
+                    check_vegetarian.setVisibility(View.INVISIBLE);
+                    check_vegan.setVisibility(View.INVISIBLE);
+                    ch=0; ch2 = 1; ch1 = 0;
+                }
+                else {
+                    check_vegan.setVisibility(View.INVISIBLE);
+                    ch = 0;
+                }
+                //Log.e("VEGAN = "," "+ch2);
+            }
+        });
+
         card_Vegetarian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (ch1==0) {
                     check_vegetarian.setVisibility(View.VISIBLE);
                     check_vegan.setVisibility(View.INVISIBLE);
-                    ch1 = 1;  ch2 = 0;
+                    check_none.setVisibility(View.INVISIBLE);
+                    ch=0; ch1 = 1;  ch2 = 0;
                 }
                 else
                 {
@@ -91,7 +112,8 @@ public class Prefrences_fragment extends Fragment
                 {
                     check_vegan.setVisibility(View.VISIBLE);
                     check_vegetarian.setVisibility(View.INVISIBLE);
-                    ch2 = 1; ch1 = 0;
+                    check_none.setVisibility(View.INVISIBLE);
+                    ch=0; ch2 = 1; ch1 = 0;
                 }
                 else {
                     check_vegan.setVisibility(View.INVISIBLE);
