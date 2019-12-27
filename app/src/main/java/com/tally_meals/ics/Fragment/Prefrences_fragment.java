@@ -75,13 +75,12 @@ public class Prefrences_fragment extends Fragment
                     check_none.setVisibility(View.VISIBLE);
                     check_vegetarian.setVisibility(View.INVISIBLE);
                     check_vegan.setVisibility(View.INVISIBLE);
-                    ch=0; ch2 = 1; ch1 = 0;
+                    ch=1; ch2 = 0; ch1 = 0;
                 }
                 else {
-                    check_vegan.setVisibility(View.INVISIBLE);
+                    check_none.setVisibility(View.INVISIBLE);
                     ch = 0;
                 }
-                //Log.e("VEGAN = "," "+ch2);
             }
         });
 
@@ -99,7 +98,6 @@ public class Prefrences_fragment extends Fragment
                     check_vegetarian.setVisibility(View.INVISIBLE);
                     ch1 = 0 ;
                 }
-                //Log.e("VEGETERIAN = "," "+ch1);
             }
         });
 
@@ -119,7 +117,6 @@ public class Prefrences_fragment extends Fragment
                     check_vegan.setVisibility(View.INVISIBLE);
                      ch2 = 0;
                 }
-                //Log.e("VEGAN = "," "+ch2);
             }
         });
 

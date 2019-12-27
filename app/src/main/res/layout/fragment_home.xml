@@ -349,7 +349,7 @@
           android:id="@+id/rellyt"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:background="@color/light_grey"
+          android:background="#ECECEC"
           android:padding="6dp"
           >
         <TextView
@@ -401,8 +401,13 @@
                     android:layout_below="@+id/relline"
                     android:layout_marginTop="10dp"
                     android:visibility="visible"
-                    android:padding="15dp"
                     >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -435,12 +440,22 @@
                         android:textAlignment="textStart"
                         android:layout_marginTop="10dp"
                         />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.66dp"
+                        android:background="@color/black"
+                        />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="15dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
                         >
 
 
@@ -526,7 +541,9 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="Party Size Options"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:textSize="8pt"
                         android:textColor="@color/blue"/>
 
@@ -534,7 +551,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:text="Add Notes Box"
                         android:textSize="8pt"
                         android:textColor="@color/blue"/>
@@ -543,14 +562,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:text="Rate this Meal Stars"
                         android:textSize="8pt"
-                        android:textColor="@color/blue"/>
+                        android:textColor="@color/blue"
+                        />
 
                 </LinearLayout>
 
     </RelativeLayout>
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/light_Purple"
+            android:layout_below="@+id/crd1"
+            android:layout_marginTop="7dp"
+            app:cardCornerRadius="10dp"
+            >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <RelativeLayout
@@ -565,9 +611,10 @@
                     android:id="@+id/rellyt1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/light_grey"
+                    android:background="#ECECEC"
                     android:padding="6dp"
                     >
+
                     <TextView
                         android:id="@+id/ttime1"
                         android:layout_width="wrap_content"
@@ -601,13 +648,13 @@
                     android:background="@color/black"
                     android:layout_below="@+id/rellyt1"/>
 
-               <!-- <ImageView
-                    android:id="@+id/ic_dow2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="44dp"
-                    android:src="@drawable/ic_arrow_down"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="7pt"/>-->
+                <!-- <ImageView
+                     android:id="@+id/ic_dow2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="44dp"
+                     android:src="@drawable/ic_arrow_down"
+                     android:layout_alignParentEnd="true"
+                     android:layout_marginTop="7pt"/>-->
 
                 <LinearLayout
                     android:id="@+id/ll2"
@@ -618,50 +665,62 @@
                     android:layout_below="@+id/rellyt1"
                     android:layout_marginTop="20dp"
                     android:visibility="visible"
-                    android:padding="15dp"
                     >
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Salad Bar"
-                        android:textSize="8pt"
-                        style="@style/bold_tx"
-                        android:textColor="@color/black"
-                        android:textAlignment="textStart"
-                        />
+                        android:orientation="vertical"
+                        android:padding="15dp"
+                        >
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Black Bean Burhers"
-                        android:textSize="8pt"
-                        style="@style/bold_tx"
-                        android:textColor="@color/black"
-                        android:textAlignment="textStart"
-                        android:layout_marginTop="3dp"
-                        />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Salad Bar"
+                            android:textSize="8pt"
+                            style="@style/bold_tx"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            />
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Black Bean Burhers"
+                            android:textSize="8pt"
+                            style="@style/bold_tx"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            android:layout_marginTop="10dp"
+                            />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Swiss Cheese, shaved lettuce
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Swiss Cheese, shaved lettuce
                              English Muffin"
-                        android:textSize="8pt"
-                        android:textColor="@color/black"
-                        android:textAlignment="textStart"
-                        android:layout_marginTop="3dp"
-                        />
+                            android:textSize="8pt"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            android:layout_marginTop="10dp"
+                            />
 
-                    <TextView
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Apple Crumb Cake"
+                            android:textSize="8pt"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            android:layout_marginTop="10dp"
+                            />
+                    </LinearLayout>
+
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Apple Crumb Cake"
-                        android:textSize="8pt"
-                        android:textColor="@color/black"
-                        android:textAlignment="textStart"
-                        android:layout_marginTop="3dp"
+                        android:layout_height="0.66dp"
+                        android:background="@color/black"
                         />
 
                     <LinearLayout
@@ -669,6 +728,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="15dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
                         >
 
 
@@ -755,7 +816,9 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="Party Size Options"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:textSize="8pt"
                         android:textColor="@color/blue"/>
 
@@ -764,7 +827,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:text="Add Notes Box"
                         android:textSize="8pt"
                         android:textColor="@color/blue"/>
@@ -774,7 +839,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:text="Rate this Meal Stars"
                         android:textSize="8pt"
                         android:textColor="@color/blue"/>
@@ -784,9 +852,13 @@
                 </LinearLayout>
 
             </RelativeLayout>
+
+
+
         </LinearLayout>
         </androidx.cardview.widget.CardView>
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
     </ScrollView>
 
