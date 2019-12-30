@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentmanager = getSupportFragmentManager();
                         fragmentTransaction =fragmentmanager.beginTransaction();
                         fragmentTransaction.replace(R.id.fragment_layout,fragment);
-                        //fragmentTransaction.addToBackStack(null);
+                        fragmentTransaction.addToBackStack(fragment.getTag());
                         fragmentTransaction.commit();
 
                         break;
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentmanager = getSupportFragmentManager();
                         fragmentTransaction =fragmentmanager.beginTransaction();
                         fragmentTransaction.replace(R.id.fragment_layout,fragment);
-                        //fragmentTransaction.addToBackStack(null);
+                       fragmentTransaction.addToBackStack(fragment.getTag());
                         fragmentTransaction.commit();
                         break;
 
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentmanager = getSupportFragmentManager();
                         fragmentTransaction =fragmentmanager.beginTransaction();
                         fragmentTransaction.replace(R.id.fragment_layout,fragment);
-                        //fragmentTransaction.addToBackStack(null);
+                        fragmentTransaction.addToBackStack(fragment.getTag());
                         fragmentTransaction.commit();
                         break;
 
