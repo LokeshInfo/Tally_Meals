@@ -38,4 +38,7 @@ dependencies {
     // Horizontal Date Picker
     implementation 'com.github.jhonnyx2012:horizontal-picker:1.0.6'
 
+    // Spinner
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+
 }

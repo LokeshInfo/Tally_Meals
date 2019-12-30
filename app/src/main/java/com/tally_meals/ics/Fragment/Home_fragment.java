@@ -6,8 +6,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,12 +18,15 @@ import androidx.fragment.app.Fragment;
 
 import com.github.jhonnyx2012.horizontalpicker.DatePickerListener;
 import com.github.jhonnyx2012.horizontalpicker.HorizontalPicker;
+import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.tally_meals.ics.MainActivity;
 import com.tally_meals.ics.R;
 
 import org.joda.time.DateTime;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Home_fragment extends Fragment implements DatePickerListener
 {
@@ -31,6 +36,7 @@ public class Home_fragment extends Fragment implements DatePickerListener
     int currentdate;
     LinearLayout ll1 ,ll2;
     HorizontalPicker jonyCalendar;
+    MaterialSpinner spinner_lunch,spinner_lunch1;
 
     @Nullable
     @Override
@@ -45,6 +51,8 @@ public class Home_fragment extends Fragment implements DatePickerListener
         //icarrow2 = view.findViewById(R.id.ic_dow2);
         ll1 = view.findViewById(R.id.ll1);
         ll2 = view.findViewById(R.id.ll2);
+        spinner_lunch = view.findViewById(R.id.spinner_lunch);
+        spinner_lunch1 = view.findViewById(R.id.spinner_lunch1);
 
         jonyCalendar = (HorizontalPicker) view.findViewById(R.id.jonycalendar);
 
@@ -101,6 +109,27 @@ public class Home_fragment extends Fragment implements DatePickerListener
 
     private void Click_Listeners()
     {
+        List<String> list = new ArrayList<String>();
+        list.add(" 1 ");
+        list.add(" 2 ");
+        list.add(" 3 ");
+        list.add(" 4 ");
+        list.add(" 5 ");
+        spinner_lunch.setItems(list);
+        spinner_lunch.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+
+            @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                //Snackbar.make(view, "Clicked " + item, Snackbar.LENGTH_LONG).show();
+            }
+        });
+        spinner_lunch1.setItems(list);
+        spinner_lunch1.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+
+            @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                //Snackbar.make(view, "Clicked " + item, Snackbar.LENGTH_LONG).show();
+            }
+        });
+
       /*  icarrow1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

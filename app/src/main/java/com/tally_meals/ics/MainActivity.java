@@ -14,12 +14,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
-import com.tally_meals.ics.Fragment.Daily_view_fragment;
 import com.tally_meals.ics.Fragment.Home_fragment;
 import com.tally_meals.ics.Fragment.Prefrences_fragment;
 import com.tally_meals.ics.Fragment.Profile_fragment;
 import com.tally_meals.ics.Fragment.Template_fragment;
-import com.tally_meals.ics.Fragment.Weekly_fragment;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -112,29 +110,9 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
 
-                    case R.id.nav_daily:
-                        closeDrawer();
-                        fragment = new Daily_view_fragment();
-                        fragmentmanager = getSupportFragmentManager();
-                        fragmentTransaction =fragmentmanager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment_layout,fragment);
-                        //fragmentTransaction.addToBackStack(null);
-                        fragmentTransaction.commit();
-                        break;
-
                     case R.id.nav_pref:
                         closeDrawer();
                         fragment = new Prefrences_fragment();
-                        fragmentmanager = getSupportFragmentManager();
-                        fragmentTransaction =fragmentmanager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment_layout,fragment);
-                        //fragmentTransaction.addToBackStack(null);
-                        fragmentTransaction.commit();
-                        break;
-
-                    case R.id.nav_weekly:
-                        closeDrawer();
-                        fragment = new Weekly_fragment();
                         fragmentmanager = getSupportFragmentManager();
                         fragmentTransaction =fragmentmanager.beginTransaction();
                         fragmentTransaction.replace(R.id.fragment_layout,fragment);
