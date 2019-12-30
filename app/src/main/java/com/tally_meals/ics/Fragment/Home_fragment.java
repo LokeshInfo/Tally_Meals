@@ -1,15 +1,20 @@
 package com.tally_meals.ics.Fragment;
 
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,6 +38,7 @@ public class Home_fragment extends Fragment implements DatePickerListener
     ImageView imgToolbar, ic_Notify;
     //icarrow1, icarrow2;
     Toolbar toolbar;
+    TextView rate1, rate2;
     int currentdate;
     LinearLayout ll1 ,ll2;
     HorizontalPicker jonyCalendar;
@@ -51,6 +57,8 @@ public class Home_fragment extends Fragment implements DatePickerListener
         //icarrow2 = view.findViewById(R.id.ic_dow2);
         ll1 = view.findViewById(R.id.ll1);
         ll2 = view.findViewById(R.id.ll2);
+        rate1 = view.findViewById(R.id.rate1);
+        rate2 = view.findViewById(R.id.rate2);
         spinner_lunch = view.findViewById(R.id.spinner_lunch);
         spinner_lunch1 = view.findViewById(R.id.spinner_lunch1);
 
@@ -130,31 +138,46 @@ public class Home_fragment extends Fragment implements DatePickerListener
             }
         });
 
-      /*  icarrow1.setOnClickListener(new View.OnClickListener() {
+        rate1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if (ll1.getVisibility() == View.GONE) {
-                    ll1.setVisibility(View.VISIBLE);
-                }
-                else
-                {
-                    ll1.setVisibility(View.GONE);
-                }            }
+            public void onClick(View view) {
+                show_dialog();
+            }
         });
 
-
-        icarrow2.setOnClickListener(new View.OnClickListener() {
+        rate2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if (ll2.getVisibility() == View.GONE) {
-                    ll2.setVisibility(View.VISIBLE);
-                }
-                else
-                {
-                    ll2.setVisibility(View.GONE);
-                }            }
-        });*/
-
+            public void onClick(View view) {
+                show_dialog();
+            }
+        });
     }
+
+    private void show_dialog(){
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_rate_meal);
+
+        Window window = dialog.getWindow();
+        window.setLayout(WindowManager.LayoutParams.FILL_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
+        ImageView cancel = dialog.findViewById(R.id.cancel);
+        Button submit = dialog.findViewById(R.id.submit);
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();            }        });
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();           }     });
+
+        dialog.show();
+        dialog.setCanceledOnTouchOutside(true);
+    }
+
 
 }
